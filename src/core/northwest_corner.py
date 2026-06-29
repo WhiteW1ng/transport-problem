@@ -9,8 +9,8 @@ def northwest_corner(problem: TransportProblem) -> TransportPlan:
     m, n = costs.shape
     allocation = np.zeros((m, n), dtype=float)
     iterations = []
-
     i, j = 0, 0
+
     while i < m and j < n:
         x = min(supply[i], demand[j])
         allocation[i, j] = x
